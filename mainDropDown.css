@@ -1,0 +1,36 @@
+.dropDown ul ul{
+  display: none;
+}
+.dropDown>ul>li:hover ul{
+   display:block;
+   background-color: #D5C0D3;
+   width: 100%;
+   border-top: 9px solid #91528B;
+   border-bottom: 9px solid #91528B;
+   height: 80px;
+   font-family: Amatic SC;
+   font-size: 45px;
+   position:absolute;
+   left: 0px;
+   right: 0px;
+   top:86px;
+   list-style: none;
+   display: inline-flex;
+}
+
+.dropDown li li{
+  width:120px;
+  height:100%;
+  margin-right:20px;
+}
+
+.dropDown li li a{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+.dropDown li li a:hover{
+  color:white;
+  background:none;
+}

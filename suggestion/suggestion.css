@@ -1,0 +1,38 @@
+#mainPicPlant{
+    height: 1000px;
+    padding-top: 20px;
+}
+#plantMain{
+  width: 100%;
+  height: 1000px;
+  padding: 0px;
+  padding-top: 150px;
+}
+.content{
+  width: 35%;
+  height: 90%;
+  float: left;
+  margin-left: 10%;
+}
+.error{
+  width:20%;
+  height: 90%;
+  float: left;
+  margin-left:10%;
+}
+#list{
+  height:300px;
+  background-color: pink;
+}
+#listBlank{
+  height:300px;
+}
+#listRowTop{
+  padding-left:150px;
+  padding-top:150px;
+}
+
+#listRow{
+  padding-left:150px;
+  padding-top:70px;
+}

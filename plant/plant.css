@@ -1,0 +1,161 @@
+#mainPicPlant{
+    height: 1000px;
+    padding-top: 20px;
+}
+#plantMain{
+  width: 100%;
+  height: 1000px;
+  padding-top: 150px;
+}
+#plantMainTextTitle{
+  float: left;
+  background-color: #C96B70;
+  color: white;
+  width: 50%;
+  height: 13%;
+  border-bottom: 7px solid black;
+}
+#plantMainTextTitleStory{
+  background-color: #C96B70;
+  color: white;
+  width: 80%;
+  height: 13%;
+  border-bottom: 7px solid black;
+}
+#plantMainTextTitleEng{
+  float: left;
+  display: inline-block;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 50px;
+  font-size: 30px;
+  font-family: Bradley Hand ITC;
+}
+#plantMainTextTitleKor{
+  float: left;
+  display: inline-block;
+  padding: 0px;
+  padding-right: 30px;
+  padding-top: 10px;
+  margin: 0px;
+  color: white;
+  font-family: 나눔손글씨 펜;
+  font-size: 60px;
+}
+#plantMainText{
+  float: left;
+  background-color: #E3BDBB;
+  width: 50%;
+  height: 78%;
+  color: white;
+  font-size: 35px;
+  font-family: 나눔손글씨 펜;
+}
+#plantMainTextImg{
+  background-color: skyblue;
+  background-position: center;
+  width: 30%;
+  height: 91%;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10%;
+  float: left;
+  border-bottom: 7px solid black;
+}
+#plantMainTextStoryLay{
+  background-color: #E3BDBB;
+  width: 80%;
+  height: 78%;
+  color: white;
+  font-size: 35px;
+  font-family: 나눔손글씨 펜;
+}
+#plantMainTextStory{
+  background-color: #E3BDBB;
+  width: 95%;
+  height: 90%;
+  color: white;
+  font-size: 35px;
+  font-family: 나눔손글씨 펜;
+  padding-top: 20px;
+}
+#mainPicPlantMain{
+  height: 100%;
+  width: 100%;
+}
+.test{
+  width: 15%;
+  height: 90%;
+  float: left;
+  margin-left: 4%;
+}
+#listBlank{
+  height:300px;
+}
+#listRowTop{
+  padding-left:150px;
+  padding-top:150px;
+}
+
+#listRow{
+  padding-left:150px;
+  padding-top:70px;
+}
+#search{
+  padding-top:9%;
+  padding-bottom: 12%;
+  height:80%;
+  font-size: 30px;
+}
+
+.btn-custom {
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.39);
+}
+#red{
+  background-color: hsl(0, 100%, 36%) !important;
+  background-image: linear-gradient(#ff3232, #b70000);
+  border-color: #b70000 #b70000 hsl(0, 100%, 30%);
+}
+#orange{
+  background-color: hsl(30, 100%, 36%) !important;
+  background-image: linear-gradient(#ff9932, #b75b00);
+  border-color: #b75b00 #b75b00 hsl(30, 100%, 30%);
+}
+#yellow{
+  background-color: hsl(49, 100%, 36%) !important;
+  background-image: linear-gradient(#ffd932, #b79500);
+  border-color: #b79500 #b79500 hsl(49, 100%, 30%);
+}
+#green{
+  background-color: hsl(117, 76%, 36%) !important;
+  background-image: linear-gradient(#53e64b, #1da116);
+  border-color: #1da116 #1da116 hsl(117, 76%, 30%);
+}
+#blue{
+  background-color: hsl(213, 76%, 36%) !important;
+   background-image: linear-gradient(#4b91e6, #1654a1);
+   border-color: #1654a1 #1654a1 hsl(213, 76%, 30%);
+}
+#violet{
+  background-color: hsl(270, 59%, 21%) !important;
+ background-image: linear-gradient(#722fb6, #351555);
+ border-color: #351555 #351555 hsl(270, 59%, 15%);
+}
+#pink{
+  background-color: hsl(316, 59%, 61%) !important;
+  background-image: linear-gradient(#efc2e3, #d660b6);
+  border-color: #d660b6 #d660b6 hsl(316, 59%, 55%);
+}
+#white{
+  background-color: hsl(360, 0%, 88%) !important;
+  background-image: linear-gradient(#11d11d11d, #e0e0e0);
+  border-color: #e0e0e0 #e0e0e0 hsl(360, 0%, 82%);
+  color: #333 !important;
+}
+#black{
+  background-color: hsl(360, 0%, 5%) !important;
+background-image: linear-gradient(#494949, #0c0c0c);
+border-color: #0c0c0c #0c0c0c hsl(360, 0%, -1%);
+}
