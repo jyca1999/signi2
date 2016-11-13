@@ -14,6 +14,6 @@
  mysql_close($connect);
 
  //echo $_POST['user_id'];
- echo "<meta http-equiv='refresh' content='0; url=http://signi2.cafe24.com/logIn.html'>";
+ echo "<meta http-equiv='refresh' content='0; url=http://signi2.cafe24.com/logIn.php'>";
 
 ?>

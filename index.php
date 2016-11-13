@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,7 +13,7 @@
       <link rel="stylesheet" type="text/css" href="mainDropDown.css">
 
       <meta charset="utf-8">
-      <title>HTML</title>
+      <title>Signi</title>
   </head>
   <body>
     <div class="container dropDown" id="top">
@@ -22,70 +23,78 @@
           <a href="http://signi2.cafe24.com/">Signi</a>
         <li>
         <li id="topNavli">
-          <a href="/plant.html">Plant</a>
+          <a href="/plant.php">Plant</a>
           <ul id="topNavDrop">
             <li style="margin-right:10px;">
-              <a href="/plant/plantSpring.html">Spring</a>
+              <a href="/plant/plantSpring.php">Spring</a>
             </li>
             <li>
-              <a href="/plant/plantSummer.html">Summer</a>
+              <a href="/plant/plantSummer.php">Summer</a>
             </li>
             <li>
-              <a href="/plant/plantAutume.html">Autume</a>
+              <a href="/plant/plantAutume.php">Autume</a>
             </li>
             <li>
-              <a href="/plant/plantWinter.html">Winter</a>
+              <a href="/plant/plantWinter.php">Winter</a>
             </li>
           </ul>
         </li>
         <li id="topNavli">
-          <a href="/stone.html">Stone</a>
+          <a href="/stone.php">Stone</a>
           <ul id="topNavDrop">
             <li style="padding-left:35px;">
-              <a href="/stone/stoneRed.html">Red</a>
+              <a href="/stone/stoneRed.php">Red</a>
             </li>
             <li>
-              <a href="/stone/stoneYellow.html">Yellow</a>
+              <a href="/stone/stoneYellow.php">Yellow</a>
             </li>
             <li>
-              <a href="/stone/stoneGreen.html">Green</a>
+              <a href="/stone/stoneGreen.php">Green</a>
             </li>
             <li>
-              <a href="/stone/stoneBlue.html">Blue</a>
+              <a href="/stone/stoneBlue.php">Blue</a>
             </li>
             <li>
-              <a href="/stone/stoneViolet.html">Violet</a>
+              <a href="/stone/stoneViolet.php">Violet</a>
             </li>
             <li>
-              <a href="/stone/stoneWhite.html">White</a>
+              <a href="/stone/stoneWhite.php">White</a>
             </li>
             <li>
-              <a href="/stone/stoneBlack.html">Black</a>
+              <a href="/stone/stoneBlack.php">Black</a>
             </li>
           </ul>
         </li>
         <li id="topNavli">
-          <a href="/suggestion.html">Suggestion</a>
+          <a href="/suggestion.php">Suggestion</a>
           <ul id="topNavDrop">
             <li>
-              <a href="/suggestion/suggestionContent.html">Content</a>
+              <a href="/suggestion/suggestionContent.php">Content</a>
             </li>
             <li>
-              <a href="/suggestion/suggestionError.html">Error</a>
+              <a href="/suggestion/suggestionError.php">Error</a>
             </li>
           </ul>
         </li>
         <li id="join">
-          <a href="/joing.html">Join</a>
+          <a href="/joing.php">Join</a>
         </li>
 
         <li id="join">
-          <?if($_SESSION['id']==$_SESSION['cid'] && $_SESSION['pw']==$_SESSION['cpw']&&$_SESSION['id']!=null&&$_SESSION['pw']!=null) { ?>
+          <?if($_SESSION['USDI']==$_SESSION['USDIC'] && $_SESSION['USWP']==$_SESSION['USWPC']&&$_SESSION['USDI']!=null&&$_SESSION['USWP']!=null) { ?>
            <a href="/logout.php">Log-Out</a>
           <?} else {?>
-          <a href="/logIn.html">Log-In</a>
+            <?if($_SESSION['USDI']==$_SESSION['USDIC'] && $_SESSION['USWP']==$_SESSION['USWPC']&&$_SESSION['USDI']!=null&&$_SESSION['USWP']!=null) { ?>
+   <a href="/logout.php">Log-Out</a>
+  <?} else {?>
+    <?if($_SESSION['USDI']==$_SESSION['USDIC'] && $_SESSION['USWP']==$_SESSION['USWPC']&&$_SESSION['USDI']!=null&&$_SESSION['USWP']!=null) { ?>
+   <a href="/logout.php">Log-Out</a>
+  <?} else {?>
+  <a href="/logIn.php">Log-In</a>
+  <? } ?>
+  <? } ?>
           <? } ?>
-        <li>
+        </li>
       </ul>
 
     </div>
@@ -96,9 +105,10 @@
     <div class="container" id="mainSub">
       <img src="main-3.png" class="img-responsive center-block mainSubPic"/>
     </div>
-
-    <div class="container" id="footerMain">
-
-    </div>
-  </body>
+  <div class="container" id="footerMain">
+  <p>
+    ⓒ 2016. 차주영 all rights reserved.
+  </p>
+</div>
+</body>
 </html>

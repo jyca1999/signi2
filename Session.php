@@ -36,7 +36,7 @@
     {
         //echo $_SESSION['id']."=sessionId ".$_SESSION['pw']."=sessionPw ".$_SESSION['cid']."=sessionCid ".$_SESSION['cpw']."=sessionCpw".$user_check."=user_check";
 
-      //  echo "<meta http-equiv='refresh' content='0; url=/logIn.html'>";
+      //  echo "<meta http-equiv='refresh' content='0; url=/logIn.php'>";
 
     }
 

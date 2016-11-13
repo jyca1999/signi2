@@ -1,2 +1,13 @@
-<div class="container" id="plantMainTextImg" style="background-image:url(/images/plant/spring/cherryblossomText.jpeg);"></div>
-<a href="/plant/plantIntroduceStory.php?name=벚꽃">관련 이야기</a>
+function checkCount() {
+
+    var cnt = 0;
+
+    for ( var i = 0; i < document.form.checkbox.length; i++ ) {
+
+        if ( document.form.checkbox[i].checked ) cnt++
+
+    }
+
+    return cnt;
+
+}
