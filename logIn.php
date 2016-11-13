@@ -12,53 +12,39 @@
       <link rel="stylesheet" type="text/css" href="/MainStyle.css">
       <link rel="stylesheet" type="text/css" href="/mainDropDown.css">
 
+
       <script>
 
        function chk_frm(){
 
-//         if(!document.join.email.value){
-//          window.alert('로그인해 주세요');
-//          document.join.email.focus();
-//          return false;
-//         }
-         if(!document.cs_write.csTitle.value){
-          window.alert('제목을 입력해 주세요');
-          document.join.user_id.focus();
-          window.alert(check2);
+         if(!document.login.user_id.value){
+          window.alert('아이디를 입력해 주세요');
+          document.login.user_id.focus();
           return false;
          }
 
-         if(!document.cs_write.csWrite.value){
-          window.alert('내용을 입력해 주세요');
-          document.join.pw.focus();
+         if(!document.login.pw.value){
+          window.alert('비밀번호를 입력해 주세요');
+          document.login.pw.focus();
           return false;
          }
-
 
        return true;
        }
 
 
-      function checkID()
-      {
-      window.open("/check_id.php?id="+document.join.user_id.value,
-      "IDcheck", "left=200, top=200, width=250, height=100 , scrollbars=no, resizable=yes");
-
-
-
-
-      }
 
       </script>
+
       <meta charset="utf-8">
-      <title>Signi - 에러관련 문의</title>
+      <title>Signi - 로그인</title>
   </head>
   <body>
     <div class="container dropDown" id="top">
 
       <ul class="list-inline" id="topNav">
         <li id="title">
-          <a href="http://signi2.cafe24.com/">Signi</a>
+          <a href="/index.php">Signi</a>
         <li>
         <li id="topNavli">
           <a href="/plant.php">Plant</a>
@@ -107,10 +93,10 @@
           <a href="/suggestion.php">Suggestion</a>
           <ul id="topNavDrop">
             <li>
-              <a href="/suggestion/suggestionContentWrite.php">Content</a>
+              <a href="/suggestion/suggestionContent.php">Content</a>
             </li>
             <li>
-              <a href="/suggestion/suggestionErrorWrite.php">Error</a>
+              <a href="/suggestion/suggestionError.php">Error</a>
             </li>
           </ul>
         </li>
@@ -119,6 +105,9 @@
         </li>
 
         <li id="join">
+          <?php if($_SESSION['id']==$_SESSION['cid'] && $_SESSION['pw']==$_SESSION['cpw']&&$_SESSION['id']!=null&&$_SESSION['pw']!=null) { ?>
+           <a href="/logout.php">Log-Out</a>
+          <?php } else {?>
             <?if($_SESSION['USDI']==$_SESSION['USDIC'] && $_SESSION['USWP']==$_SESSION['USWPC']&&$_SESSION['USDI']!=null&&$_SESSION['USWP']!=null) { ?>
    <a href="/logout.php">Log-Out</a>
   <?} else {?>
@@ -128,32 +117,29 @@
   <a href="/logIn.php">Log-In</a>
   <? } ?>
   <? } ?>
+          <?php } ?>
         <li>
       </ul>
 
     </div>
     </div>
 
-    <div class="container" id="writePanel">
-      <form class="form-horizontal" action="/addE.php" method="post" onsubmit="return chk_frm()" name="cs_write">
-        <div class="form-group">
-          <label for="writetitle" class="col-sm-3 control-label">제목</label>
+    <div class="container" id="loginPanel">
+      <form class="form-horizontal" action="/forLogin.php" method="post" onsubmit="return chk_frm()" name="login">
+        <div class="form-group" >
+          <label for="inputId" class="col-sm-3 control-label">ID</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" id="writeTitle" placeholder="제목" name="csTitle">
+            <input type="text" class="form-control" id="inputId" placeholder="아이디" name="user_id">
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <input type="text" class="form-control" id="writeContent" placeholder="여기에 내용을 입력해 주십시오" name="csWrite">
+          <label for="inputPassword" class="col-sm-3 control-label">Password</label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pw">
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-9">
-            <p style="color: red;">
-              모든 답변은 가입시에 기입한 이메일로 보내드립니다.
-            </p>
-          </div>
-          <div class="col-sm-1">
+          <div class="col-sm-offset-3 col-sm-9">
             <button type="submit" class="btn btn-default">제출</button>
           </div>
         </div>
