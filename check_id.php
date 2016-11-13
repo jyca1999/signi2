@@ -29,13 +29,17 @@
          {
              echo "아이디가 중복됩니다.<br>";
              echo "다른 아이디를 사용하세요.<br>";
-             $check = false;
+             $query = "insert into check(`check`) values('false')";
+             mysql_query($query, $connect);
+             mysql_close($connect);
           }
 
           else
           {
               echo "사용가능한 아이디 입니다.";
-              $check = true;
+              $query = "insert into check(`check`) values(true)";
+              mysql_query($query, $connect);
+              mysql_close($connect);
            }
 
 

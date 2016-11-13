@@ -1,7 +1,8 @@
+<?session_start();?>
 <?php
 
- $id = $_POST['user_id'];
- $password = $_POST['pw'];
+ $id = $_SESSION['USDI'];
+ $password = $_SESSION['USWP'];
  $title = $_POST['csTitle'];
  $content = $_POST['csWrite'];
 
@@ -14,6 +15,6 @@
  mysql_close($connect);
 
  //echo $_POST['user_id'];
- echo "<meta http-equiv='refresh' content='0; url=/suggestion.html'>";
+ echo "<meta http-equiv='refresh' content='0; url=/suggestion.php'>";
 
 ?>

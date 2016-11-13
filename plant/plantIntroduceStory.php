@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,68 +27,76 @@
           <a href="/">Signi</a>
         <li>
         <li id="topNavli">
-          <a href="/plant.html">Plant</a>
+          <a href="/plant.php">Plant</a>
           <ul id="topNavDrop">
             <li style="margin-right:10px;">
-              <a href="/plant/plantSpring.html">Spring</a>
+              <a href="/plant/plantSpring.php">Spring</a>
             </li>
             <li>
-              <a href="/plant/plantSummer.html">Summer</a>
+              <a href="/plant/plantSummer.php">Summer</a>
             </li>
             <li>
-              <a href="/plant/plantAutume.html">Autume</a>
+              <a href="/plant/plantAutume.php">Autume</a>
             </li>
             <li>
-              <a href="/plant/plantWinter.html">Winter</a>
+              <a href="/plant/plantWinter.php">Winter</a>
             </li>
           </ul>
         </li>
         <li id="topNavli">
-          <a id="unSelect" href="/stone.html">Stone</a>
+          <a id="unSelect" href="/stone.php">Stone</a>
           <ul id="topNavDrop">
             <li style="padding-left:35px;">
-              <a href="/stone/stoneRed.html">Red</a>
+              <a href="/stone/stoneRed.php">Red</a>
             </li>
             <li>
-              <a href="/stone/stoneYellow.html">Yellow</a>
+              <a href="/stone/stoneYellow.php">Yellow</a>
             </li>
             <li>
-              <a href="/stone/stoneGreen.html">Green</a>
+              <a href="/stone/stoneGreen.php">Green</a>
             </li>
             <li>
-              <a href="/stone/stoneBlue.html">Blue</a>
+              <a href="/stone/stoneBlue.php">Blue</a>
             </li>
             <li>
-              <a href="/stone/stoneViolet.html">Violet</a>
+              <a href="/stone/stoneViolet.php">Violet</a>
             </li>
             <li>
-              <a href="/stone/stoneWhite.html">White</a>
+              <a href="/stone/stoneWhite.php">White</a>
             </li>
             <li>
-              <a href="/stone/stoneBlack.html">Black</a>
+              <a href="/stone/stoneBlack.php">Black</a>
             </li>
           </ul>
         </li>
         <li id="topNavli">
-          <a id="unSelect" href="/suggestion.html">Suggestion</a>
+          <a id="unSelect" href="/suggestion.php">Suggestion</a>
           <ul id="topNavDrop">
             <li>
-              <a href="/suggestion/suggestionContent.html">Content</a>
+              <a href="/suggestion/suggestionContent.php">Content</a>
             </li>
             <li>
-              <a href="/suggestion/suggestionError.html">Error</a>
+              <a href="/suggestion/suggestionError.php">Error</a>
             </li>
           </ul>
         </li>
         <li id="topNavliSearch">
-          <a id="unSelect" href="/plant/plantSearch.html">Search</a>
+          <a id="unSelect" href="/plant/plantSearch.php">Search</a>
         </li>
         <li id="join">
-          <a href="/joing.html">Join</a>
+          <a href="/joing.php">Join</a>
         </li>
 
         <li id="join">
-          <a href="/logIn.html">Log-In</a>
+            <?if($_SESSION['USDI']==$_SESSION['USDIC'] && $_SESSION['USWP']==$_SESSION['USWPC']&&$_SESSION['USDI']!=null&&$_SESSION['USWP']!=null) { ?>
+   <a href="/logout.php">Log-Out</a>
+  <?} else {?>
+    <?if($_SESSION['USDI']==$_SESSION['USDIC'] && $_SESSION['USWP']==$_SESSION['USWPC']&&$_SESSION['USDI']!=null&&$_SESSION['USWP']!=null) { ?>
+   <a href="/logout.php">Log-Out</a>
+  <?} else {?>
+  <a href="/logIn.php">Log-In</a>
+  <? } ?>
+  <? } ?>
         <li>
       </ul>
 
@@ -148,5 +157,10 @@
               </div>
             </div>
     </div>
-  </body>
+  <div class="container" id="footerMain">
+  <p>
+    ⓒ 2016. 차주영 all rights reserved.
+  </p>
+</div>
+</body>
 </html>
